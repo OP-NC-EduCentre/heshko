@@ -1,5 +1,5 @@
-drop table customer CASCADE CONSTRAINTS;
 drop table equipment CASCADE CONSTRAINTS;
+drop table customer CASCADE CONSTRAINTS;
 
 CREATE TABLE customer(
     customer_id NUMBER(4),
