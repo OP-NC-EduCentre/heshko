@@ -1,1 +1,1 @@
-### 5 Об'єктно-реляційна модель EAV/CR – Entity-Attribute-Value with Classes and Relationships
+###5 Об'єктно-реляційна модель EAV/CR – Entity-Attribute-Value with Classes and Relationships
