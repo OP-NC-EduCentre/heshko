@@ -5,26 +5,28 @@
 */
 SELECT equipment_name, serial_number FROM equipment 
 WHERE 
-    serial_number LIKE 'WMC%';
+    serial_number LIKE 'WMC%'
+	OR serial_number LIKE 'DMC%'
+	OR serial_number LIKE 'RGB%';
 /*
 EQUIPMENT_NAME                                     SERIAL_NUMBER                 
 -------------------------------------------------- ------------------------------
 Холодильник Whirlpool                              WMC43147                      
-Microwave Bosch                                    WMC53544                      
-Microwave                                          WMC5521                  
+Microwave Bosch                                    DMC53544                      
+Microwave                                          RGB5521                  
 */
 /*
 2. Повторіть завдання 1, використовуючи регулярні вирази з альтернативними варіантами.
 */
 SELECT equipment_name, serial_number FROM equipment 
 WHERE 
-     regexp_like(serial_number, '^WMC');
+     regexp_like(serial_number, '^WMC|^DMC|^RGB');
 /*
 EQUIPMENT_NAME                                     SERIAL_NUMBER                 
 -------------------------------------------------- ------------------------------
 Холодильник Whirlpool                              WMC43147                      
-Microwave Bosch                                    WMC53544                      
-Microwave                                          WMC5521                     
+Microwave Bosch                                    DMC53544                      
+Microwave                                          RGB5521                     
 */
 /*
 3. Одна з колонок таблиць повинна містити строкове значення з цифрами від 3 до 8 у
@@ -34,7 +36,7 @@ Microwave                                          WMC5521
 SELECT equipment_name,
 	equipment_id
 	FROM equipment
-	WHERE regexp_like(equipment_id, '[3-8]');
+	WHERE regexp_like(equipment_id, '.*[3-8].*');
 /*
 EQUIPMENT_NAME                                     EQUIPMENT_ID
 -------------------------------------------------- ------------
