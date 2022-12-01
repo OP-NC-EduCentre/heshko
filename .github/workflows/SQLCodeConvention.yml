@@ -6,9 +6,9 @@ jobs:
  SQLLinter:
   runs-on: ubuntu-latest
   steps:
-  - name: Checkout Code in Repository
+  - name: Checkout code in repository
     uses: "actions/checkout@v3"
   - name: Start SQL Linter
     run: |
-      pip install sqlfluff
-      sqlfluff lint $GITHUB_WORKSPACE/*.sql --dialect oracle
+     pip install sqlfluff
+     sqlfluff lint $GITHUB_WORKSPACE/10-SQLCodingConventionsGitHubActions/*.sql --dialect oracle
