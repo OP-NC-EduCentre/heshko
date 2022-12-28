@@ -37,7 +37,7 @@ DELETE FROM equipment WHERE equipment_id = 11;
 CREATE OR REPLACE TRIGGER equipment_modification_after
     AFTER INSERT OR UPDATE OR DELETE ON equipment
     FOR EACH ROW
-    WHEN (USER = 'heshko')
+    WHEN (USER = 'HESHKO')
 BEGIN
     IF INSERTING THEN
         dbms_output.put_line('INSERTING INTO EQUIPMENT ... ');
@@ -68,7 +68,7 @@ DELETE FROM equipment WHERE equipment_id = 11;
 CREATE OR REPLACE TRIGGER equipment_modification_after
     AFTER INSERT OR UPDATE OR DELETE ON equipment
     FOR EACH ROW
-    WHEN (USER = 'foo')
+    WHEN (USER = 'FOO')
 BEGIN
     IF INSERTING THEN
         dbms_output.put_line('INSERTING INTO EQUIPMENT ... ');
